@@ -1,5 +1,0 @@
-A remake of the silent cartographer mission of Halo Combat Evolved with cutscenes.
-The game ends there after the mission ends.
-
-Tech Stacks for the engine(C++):-
-*OpenGL, *GLFW, *Assimp(or glTF), *Nvidia PhyX(if not then Havok or *bullet), *OpenAL, *GLM, ChaiScript(C++) for scripting, spdlog, *imgui for gui
