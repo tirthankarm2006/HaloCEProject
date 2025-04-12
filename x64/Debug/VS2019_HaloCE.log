@@ -1,0 +1,2 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (VS2019_HaloCE.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  VS2019_HaloCE.vcxproj -> E:\HALO CE PROJECT\VS2019_HaloCE\x64\Debug\VS2019_HALO_CE.exe
