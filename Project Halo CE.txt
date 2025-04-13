@@ -4,4 +4,4 @@ The game ends there after the mission ends.
 Tech Stacks for the engine(C++):-
 OpenGL(modern OpenGL Glad), GLFW, Assimp, Bullet Physics, OpenAL for sound, GLM for maths, imgui for gui, stb_image(for texture loading)
 
-14/04/2025:- Added Window Classes using GLFW and Glad
+14/04/2025:- Added Window Classes using GLFW and Glad and added some other dependencies
