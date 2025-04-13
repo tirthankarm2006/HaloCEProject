@@ -1,55 +1,28 @@
 #include <main2.hpp>
 #include <iostream>
+#include "settingsWindow.h"
+#include "gameWindow.h"
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
-
-const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 720;
+createSettingsWindow window1(800, 600, "GameSettings");
 
 int main()
 {
-    glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
-    if (window == NULL)
-    {
-        std::cout << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    window1.generateWindow();
+    window1.makeWindowContext();
+    window1.setFrameBufferSizeCallbackWindow();
+    window1.setBgColor(glm::vec4(0.5, 0.1, 1.0, 0.2));
+    window1.startWindowLoop(window1.window);
+    glfwTerminate();
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout << "Failed to initialize GLAD" << std::endl;
-        return -1;
-    }
-
-    while (!glfwWindowShouldClose(window))
-    {
-        processInput(window);
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+    if (window1.createGameWindowOrNot) {
+        createGameWindow gameWindow(1280, 720, "Game");
+        gameWindow.generateWindow();
+        gameWindow.makeWindowContext();
+        gameWindow.setFrameBufferSizeCallbackWindow();
+        gameWindow.setBgColor(glm::vec4(0.5, 0.7, 0.9, 0.2));
+        gameWindow.startWindowLoop(gameWindow.window);
     }
 
     glfwTerminate();
     return 0;
-}
-
-void processInput(GLFWwindow* window)
-{
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
 }
