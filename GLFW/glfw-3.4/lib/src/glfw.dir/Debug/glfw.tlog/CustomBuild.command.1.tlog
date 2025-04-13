@@ -1,0 +1,10 @@
+^E:\GAMEDEV ENVIRONMENT\CPP\GLFW-3.4\GLFW-3.4\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SE:/GameDev Environment/Cpp/glfw-3.4/glfw-3.4" "-BE:/GameDev Environment/Cpp/glfw-3.4/glfw-3.4/build" --check-stamp-file "E:/GameDev Environment/Cpp/glfw-3.4/glfw-3.4/build/src/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
