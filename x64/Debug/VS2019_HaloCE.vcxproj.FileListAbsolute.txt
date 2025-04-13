@@ -1,3 +1,0 @@
-E:\HALO CE PROJECT\VSProject_HaloCE\VS2019_HaloCE\x64\Debug\VS2019_HaloCE.exe
-E:\HALO CE PROJECT\VS2019_HaloCE\x64\Debug\VS2019_HALO_CE.exe
-E:\Repos\HaloCEGithub\HaloCEProject\x64\Debug\VS2019_HALO_CE.exe
